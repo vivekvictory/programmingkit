@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            coding challenges
+        </title>
+        <link rel="stylesheet" href="compiler.css">
+    </head>
+    
+    <body>
+        <nav>
+            <ul class="topnav" id="dropdownclick">
+                <li><a href="programming kit.html" >Home</a></li>
+                <li><a href="compiler.html">compiler</a></li>
+                <li><a href="download compilers.html">download compilers</a></li>
+                <li><a href="#about">About</a></li>
+                <li class="topnav-right"><a href="#signup">sign up</a></li>
+                <li class="topnav-right"><a href="#signin">sign in</a></li>
+                <li class="dropdownIcon"><a href="#;" onclick="">&#9776;</a></li>
+                <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+            </ul>
+            
+        </nav>
+        <ul id="myUL">
+            <li><a href="https://www.topcoder.com/challenges/?pageIndex=1">TopCoder</a></li>
+            <li><a href="https://www.coderbyte.com/">Coderbyte</a></li>
+          
+            <li><a href="https://projecteuler.net/">ProjectEuler</a></li>
+            <li><a href="https://www.hackerrank.com/domains">HackerRank</a></li>
+          
+            <li><a href="https://www.codechef.com/">CodeChef</a></li>
+            <li><a href="https://exercism.io/">Exercism.io</a></li>
+            <li><a href="https://www.codewars.com/">CodeWars</a></li>
+            <li><a href="https://leetcode.com/">LeetCode</a></li>
+            <li><a href="http://www.spoj.com/">SPOJ</a></li>
+          
+            <li><a href="https://www.codingame.com/">CodinGame</a></li>
+           
+          
+           
+          </ul>
+
+        <script>
+            function myFunction() {
+              // Declare variables
+              var input, filter, ul, li, a, i, txtValue;
+              input = document.getElementById('myInput');
+              filter = input.value.toUpperCase();
+              ul = document.getElementById("myUL");
+              li = ul.getElementsByTagName('li');
+            
+              // Loop through all list items, and hide those who don't match the search query
+              for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("a")[0];
+                txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                  li[i].style.display = "";
+                } else {
+                  li[i].style.display = "none";
+                }
+              }
+            }
+            </script>
+
+
+
+    </body>
+</html>
